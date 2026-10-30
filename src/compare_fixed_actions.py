@@ -1,4 +1,6 @@
-
+#Preliminary experiment to compare fixed-action policies
+#and identify the zero-torque action in discretized Reacher.
+#This experiment helped justify the action discretization.
 import csv
 from pathlib import Path
 

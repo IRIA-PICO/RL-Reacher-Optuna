@@ -23,10 +23,7 @@ for name in names:
         storage=f"sqlite:///{db}"
     )
 
-# ----------------------------------------
 # 1. OPTIMIZATION HISTORY
-# ----------------------------------------
-
 fig, axes = plt.subplots(1, 3, figsize=(16, 4.5),
                          sharey=True)
 
@@ -56,11 +53,7 @@ fig.savefig(OUTPUT / "01_optimization_history.png",
             dpi=250, bbox_inches="tight")
 plt.close(fig)
 
-
-# ----------------------------------------
 # 2. HYPERPARAMETER IMPORTANCE
-# ----------------------------------------
-
 importances = {
     name: get_param_importances(studies[name])
     for name in names
@@ -95,11 +88,7 @@ fig.savefig(OUTPUT / "02_parameter_importance.png",
             dpi=250, bbox_inches="tight")
 plt.close(fig)
 
-
-# ----------------------------------------
 # 3. MOST IMPORTANT PARAMETER VS REWARD
-# ----------------------------------------
-
 fig, axes = plt.subplots(1, 3, figsize=(16, 4.5),
                          sharey=True)
 
